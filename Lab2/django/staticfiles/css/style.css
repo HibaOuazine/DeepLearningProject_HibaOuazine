@@ -1,0 +1,45 @@
+.upload-section, .results-section {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.prediction-main {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.confidence {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+.probability-bar {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.probability-fill {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Classifier - FastAPI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-apple-alt"></i> Fruit Classifier (FastAPI)
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Classification de Fruits</h1>
+            <p class="hero-subtitle">Utilisez l'intelligence artificielle pour identifier vos fruits</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Upload Card -->
+                <div class="col-md-6">
+                    <div class="upload-card">
+                        <div class="card-header">
+                            <i class="fas fa-upload"></i>
+                            <h3>Téléchargez votre image</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="upload-form" enctype="multipart/form-data">
+                                <div class="upload-area" id="drop-zone">
+                                    <input type="file" id="image-input" class="file-input" accept="image/*">
+                                    <div class="upload-prompt">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Glissez et déposez votre image ici<br>ou cliquez pour sélectionner</p>
+                                    </div>
+                                    <div class="preview-container">
+                                        <img id="preview-image" alt="Aperçu de l'image">
+                                    </div>
+                                </div>
+                                <button type="submit" class="classify-btn">
+                                    <i class="fas fa-search"></i> Classifier l'image
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div class="col-md-6">
+                    <div class="results-card" id="results">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <h3>Résultats de la Classification</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="main-prediction">
+                                <h4>Prédiction principale</h4>
+                                <div class="prediction-result">
+                                    <span id="main-prediction"></span>
+                                    <div class="confidence-badge">
+                                        Confiance: <span id="confidence"></span>%
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="probabilities"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>
+                <i class="fas fa-code"></i> Développé par Hiba Ouazine 
+                <i class="fas fa-heart"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
